@@ -3,6 +3,7 @@ body{
   font-family: 'core_rhino_35_light',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
   font-style: normal;
   color: #fff;
+  overflow: hidden;
 }
 
 :root{
@@ -75,19 +76,17 @@ header{
 
 .page{
   padding-top: 64px;
-  padding-left: 276px;
+  padding-left: 272px;
+  height: calc(100vh - 64px);
 }
 
 
 .menu{
-  width: 272px;
-  overflow: auto;
+    width: 272px;
     position: fixed;
     top: 64px;
     bottom: 0!important;
-    left: 0;
-    margin-bottom: 52px;
-
+    left: 0;  
 }
 
 .menu_categories{
@@ -139,6 +138,12 @@ li.tab_active{
 .menu_sheet{
   background-color: #181a1b;
   font-size: 1.2em;
+  overflow: hidden;
+  height: calc(100% - 102px);
+}
+
+.menu_sheet ul{
+  width: calc(100% + 20px);
 }
 
 .menu_sheet ul li a{
@@ -172,6 +177,7 @@ li.tab_active{
   bottom: 0;
   left: 0;
   width: 100%;
+  visibility: hidden;
 }
 
 .content_bottom{
@@ -196,7 +202,6 @@ li.tab_active{
 
 .content_bottom__img img{
   height: 141px;
-  margin-right: ;
 }
 
 .content_bottom__subscription div, .content_bottom__subscription  a{
@@ -261,9 +266,9 @@ li.tab_active{
 
 footer{
   background-color: #2b2d2f;
-  margin-bottom: 52px;
   padding-top: 32px;
   font-size: 1.4em;
+  padding-bottom: 42px;
 }
 
 footer .row{
@@ -341,4 +346,33 @@ footer .title{
 small{
   font-size: 11px;
   color: #888;
+}
+
+.scroll-block{
+  width: calc(100% + 20px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.thumb{
+  width: 3px;
+  position: absolute;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  right: 15px;
+  visibility: hidden;
+}
+
+.menu_sheet, .page{
+  position: relative;
+}
+
+.page > .thumb{
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu_sheet:hover > .thumb, .page:hover > .thumb{
+  visibility: visible;
 }
