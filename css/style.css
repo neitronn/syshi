@@ -76,10 +76,17 @@ header{
 
 .page{
   padding-top: 64px;
-  padding-left: 272px;
+  padding-left: 32px;
   height: calc(100vh - 64px);
 }
 
+.page, .menu, .collapsed-menu{
+  transition: all  0.7s;
+}
+
+.menu:not(.menu-close) ~ .page{
+  padding-left: 272px;
+}
 
 .menu{
     width: 272px;
@@ -87,6 +94,41 @@ header{
     top: 64px;
     bottom: 0!important;
     left: 0;  
+    z-index: 2;
+}
+
+.menu.menu-close{
+  width: 32px;
+  background-color: #ed1b35;
+}
+
+.menu.menu-close > div:not(.collapsed-menu){
+  visibility: hidden;
+}
+
+.collapsed-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  fill: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  writing-mode: vertical-lr; 
+  text-orientation: upright; 
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu.menu-close .collapsed-menu{
+  display: flex;
+  height: 100%;
+    width: 32px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu.menu-close svg{
+  margin-right: 0;
 }
 
 .menu_categories{
@@ -353,6 +395,10 @@ small{
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
+}
+
+.scroll-block > ul:not(.active_list){
+  display: none;
 }
 
 .thumb{
