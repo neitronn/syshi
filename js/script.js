@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
            
             scroll_block.addEventListener('scroll', () => {
                 thumb.style.top =  top_init +  scroll_block.scrollTop*k + 'px';
+                thumb.classList.add("backlight");
+                setTimeout(() => thumb.classList.remove("backlight"), 700);
             })
         });
     }

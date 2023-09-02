@@ -364,6 +364,10 @@ small{
   visibility: hidden;
 }
 
+.thumb:not(.backlight){
+  transition: background  0.7s;
+}
+
 .menu_sheet, .page{
   position: relative;
 }
@@ -371,6 +375,10 @@ small{
 .page > .thumb{
   width: 10px;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.thumb.backlight{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .menu_sheet:hover > .thumb, .page:hover > .thumb{
