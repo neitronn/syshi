@@ -1,9 +1,14 @@
+html{
+  overflow: hidden;
+}
+
 body{
   font-size: 10px;
   font-family: 'core_rhino_35_light',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
   font-style: normal;
   color: #fff;
   overflow: hidden;
+  min-width: 320px;
 }
 
 :root{
@@ -32,15 +37,17 @@ header{
   right: 0;
   left: 0;
   height: 64px;
-  padding-left: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.4em;
+  width: 100vw;
+  z-index: 2;
 }
 
 .logo{
   width: 204px;
+  margin-left: 32px;
 }
 
 .head_nav{
@@ -67,6 +74,10 @@ header{
   display: flex;
   align-items: center;
   width: max-content;
+}
+
+.activity .icon-lock{
+  margin-right: 0;
 }
 
 .activity > div:not(:first-child){
@@ -229,6 +240,7 @@ li.tab_active{
   justify-content: center;
   align-items: center;
   margin-top: -2px;
+  flex-wrap: wrap;
 }
 
 .content_bottom > div:not(:last-child){
@@ -320,6 +332,10 @@ footer .row{
 
 footer .col{
   width: 25%;
+}
+
+footer .col svg{
+  display: none;
 }
 
 footer p{
@@ -425,6 +441,7 @@ small{
 
 .thumb.backlight{
   background-color: rgba(255, 255, 255, 0.5);
+  visibility: visible;
 }
 
 .menu_sheet:hover > .thumb, .page:hover > .thumb{

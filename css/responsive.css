@@ -1,0 +1,221 @@
+@media (max-width: 1300px) {
+    footer .row {
+        padding: 32px;
+    }
+    footer .row .col{
+        width: 23.5%;
+    }
+    footer .row .col:not(:last-child){
+        margin-right: 2%;
+    }
+    footer .row .col img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content_bottom__subscription{
+        width: 340px;
+        margin-right: 20px;
+    }
+    .content_bottom__subscription button{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .content_bottom__subscription{
+        width: 475px;
+        margin-right: 0;
+    }
+    .content_bottom__subscription button{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 870px) {
+    footer{
+        padding-top: 0;
+    }
+    footer .row{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .page footer div.row div.col{
+        width: 45%;
+        margin-right: 0;
+    }
+    footer .row .col:not(:last-child) ul{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    header{
+        height: 76px;
+    }
+    .page{
+        padding-top: 76px;
+    }
+    .menu{
+        top: 76px
+    }
+    header{
+        display: grid;
+        grid-template-columns: 204px 380px;
+        grid-auto-rows: 38px;
+    }
+    
+    .logo{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;  
+    }
+    .head_nav{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1; 
+    }
+    .activity{
+        border-top: 1px solid #44474a;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2; 
+    }
+    #body .page{
+        padding-left: 32px;
+    }
+}
+
+@media (max-width: 620px) {
+    header{
+        grid-template-columns: 204px 320px;
+    }
+    .footer-bottom{
+        padding-left: 20px
+    }
+}
+
+@media (max-width: 560px) {
+    footer .row{
+        display: block;
+    }
+    footer .col svg{
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        transform: rotate(90deg);
+      }
+      .page footer div.row div.col{
+        width: 90%;
+        position: relative;
+        box-shadow: 1px 2px 9px rgba(0,0,0,.15);
+        border-radius: 5px;
+        margin-bottom: 15px;
+        min-height: 50px;
+        padding: 0 20px;
+    }
+    footer .row .col img{
+        margin-top: 5px;
+        max-width: 200px;
+    }
+    footer .row .col > *:not(:first-child, svg){
+        display: none;
+    }
+    footer .row .col > *:last-child{
+        padding-bottom: 15px;
+    }
+    footer .row .col:not(:first-child) > p:first-child{
+        padding-top: 16px;
+        font-size: 16px;
+    }
+    header {
+        grid-template-columns: 140px 320px;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+    .logo, .logo img{
+        width: 140px;
+        height: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .content_bottom__subscription{
+        width: 300px;
+    }
+    .content_bottom__subscription button{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header{
+        justify-items: end;
+        grid-template-columns: 160px 1fr;
+        font-size: 12px;
+    }
+    .logo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;  
+    }
+    .head_nav{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1; 
+    }
+    .activity{
+        border-top: 1px solid #44474a;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2; 
+    }
+    .activity > div{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .content_bottom__text{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .content_bottom__img img{
+        height: 100px;
+    }
+    footer .col svg{
+        right: 5px;
+    }
+}
+
+@media (max-width: 380px) {
+    footer .row{
+        padding: 20px 20px 0 10px;
+    }
+    .content_bottom  div.content_bottom__img{
+        margin-right: 0;
+    }
+    .content_bottom__text{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .content_bottom__img img{
+        height: 80px;
+    }
+    .content_bottom__subscription{
+        width: 260px;
+    }
+    .content_bottom__subscription input{
+        width: 200px;
+    }
+}

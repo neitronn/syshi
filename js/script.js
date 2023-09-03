@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     e.remove();
                 })
 
+                if (window.screen.width <= 800){
+                    document.querySelector('.menu').classList.add('menu-close');
+                }
+
                 if (scroll_block.scrollHeight > scroll_block.offsetHeight){
                     is_style = content_block.currentStyle || window.getComputedStyle(content_block, null),
                     scroll_bar_h = scroll_block.offsetHeight - top*2,
@@ -31,13 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.addEventListener("resize", setOptions);      
            
-            scroll_block.addEventListener('scroll', () => {
-                if (scroll_block.scrollHeight > scroll_block.offsetHeight){
-                    thumb.style.top =  top_init +  scroll_block.scrollTop*k + 'px';
-                    thumb.classList.add("backlight");
-                    setTimeout(() => thumb.classList.remove("backlight"), 700);
-                }
+            ['scroll', 'touchmove'].forEach((i) => {
+                scroll_block.addEventListener(i, () => {
+                    if (scroll_block.scrollHeight > scroll_block.offsetHeight){
+                        thumb.style.top =  top_init +  scroll_block.scrollTop*k + 'px';
+                        thumb.classList.add("backlight");
+                        setTimeout(() => thumb.classList.remove("backlight"), 700);
+                    }
+                })
             })
+
+            
         });
     }
 
@@ -71,3 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
   });
+
+  const detect = new MobileDetect(window.navigator.userAgent);
+  if (detect.mobile()){
+      document.write('<style>.scroll-block{width: 100%} .thumb{visibility: hidden!important;}</style>');
+  }
