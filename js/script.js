@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 content_block.querySelectorAll('.thumb').forEach((e) => {
                     e.remove();
                 })
-
-                if (window.screen.width <= 800){
-                    document.querySelector('.menu').classList.add('menu-close');
-                }
-
                 if (scroll_block.scrollHeight > scroll_block.offsetHeight){
                     is_style = content_block.currentStyle || window.getComputedStyle(content_block, null),
                     scroll_bar_h = scroll_block.offsetHeight - top*2,
@@ -68,12 +63,16 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
-    
+    if (window.screen.width <= 800){
+        document.querySelector('.menu').classList.add('menu-close');
+    }
     document.querySelector('.sliding-menu__close').addEventListener('click', () => {
+        console.log('1');
         document.querySelector('.menu').classList.add('menu-close');
     });
 
     document.querySelector('.collapsed-menu').addEventListener('click', () => {
+        console.log('2');
         document.querySelector('.menu').classList.remove('menu-close');
     });
     
