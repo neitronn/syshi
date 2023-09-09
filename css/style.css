@@ -223,7 +223,11 @@ li.tab_active{
   object-fit: cover;
 }
 
-.content img{
+.content{
+  background-color: #000;
+}
+
+.content .main_slider{
   width: 100%;
   height: calc(100vh - 116px);
   object-fit: cover;

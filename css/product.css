@@ -1,0 +1,146 @@
+.content{
+    padding: 32px;
+}
+
+h1{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.filter, .filter-values{
+    background-color: #15171c;
+    padding: 20px 40px;
+}
+
+.filter{
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.filters__title > *, .filter-values__item, .apply-filter{
+    cursor: pointer;
+}
+
+.filters__title, .filter-sort, .sort_block, .reset_filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter_block{
+    font-size: 16px;
+    padding-right: 16px;
+    position: relative;
+    border-right: 1px solid #393e48;
+    margin-right: 16px;
+}
+
+.filter_block::after{
+    content: '';
+    background: url(../icons/img/plus_red.svg) 50% 50% no-repeat;
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -24px;
+    top: 0;
+}
+
+.filter.open-filter .filter_block::after{
+    background: url(../icons/img/minus_red.svg) 50% 50% no-repeat;
+}
+
+.sort_block{
+    font-size: 12px;
+    font-family: 'helvetica_neue_cyr_light',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
+    fill: #fff;
+}
+
+.sort_block:hover{
+    fill: #cccc28;
+}
+
+.reset_filter svg, .sort_block svg{
+    fill: inherit;
+    transition: none;
+}
+
+.sort_block svg{
+    margin-left: 8px;
+    height: 16px;
+}
+
+.reset_filter{
+    background-color: transparent;
+    border-color: transparent;
+    height: 32px;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 14px;
+    color: #888;
+    fill: #888;
+}
+
+.reset_filter svg{
+    width: 9px;
+    height: 9px;
+}
+
+.reset_filter:hover{
+    color: #ed1b35; 
+    fill: #ed1b35;
+}
+
+.filter-values{
+    position: absolute;
+    left: 0;
+    width: calc(100% - 80px);
+    font-size: 12px;
+    display: none;
+}
+
+.filter.open-filter .filter-values{
+    display: block;
+}
+
+.filter-values__items{
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.filter-values__item{
+    display: block;
+    border: 1px solid #44474a;
+    padding: 0 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s;
+}
+
+.filter-values__item:hover{
+    color: #cccc28;
+    border-color: #cccc28;
+}
+
+
+.apply-filter{
+    height: 32px;
+    background-color: #c31b30;
+    border-color: #c31b30;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 32px;
+    border: 0 solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.apply-filter:hover{
+    background-color: #ed1b35;
+    border-color: #ed1b35;
+}
+

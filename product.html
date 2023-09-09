@@ -7,9 +7,11 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="icons/style.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/product.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/filter.js"></script>
 </head>
 <body id="body">
 
@@ -428,7 +430,7 @@
         <div class="menu_sheet">
             <div class="scroll-block">
                 <ul class="active_list">
-                    <li><a href="product.html"><img src="img/left_menu/forel.png" alt="MORE Форели">MORE Форели</a></li>
+                    <li><a href="#"><img src="img/left_menu/forel.png" alt="MORE Форели">MORE Форели</a></li>
                     <li><a href="#"><img src="img/left_menu/summer.png" alt="Summer Days">Summer Days</a></li>
                     <li><a href="#"><img src="img/left_menu/sushi.png" alt="Суси и Гунканы">Суси и Гунканы</a></li>
                     <li><a href="#"><img src="img/left_menu/sashimi.png" alt="Сасими">Сасими</a></li>
@@ -471,7 +473,38 @@
     <div class="page">
         <div class="scroll-block">
             <section class="content">
-                <img class="main_slider"  src="img/content/1.jpg" alt="контент" >
+                <h1>Суши</h1>
+                <div class="filter">
+                    <div class="filters__title">
+                        <div class="filter-sort">
+                            <div class="filter_block">
+                                фильтр
+                            </div>
+                            <div class="sort_block">
+                                Сортировать по цене
+                                <svg class="icon icon-sort "><use xlink:href="#icon-sort"></use></svg>
+                            </div>
+                        </div>
+                        <button class="reset_filter">
+                            <svg class="icon icon-cross-sm">
+                                <use xlink:href="#icon-cross-sm"></use>
+                            </svg>
+                            Сбросить фильтр
+                        </button>
+                    </div>
+                    <div class="filter-values">
+                        <ul class="filter-values__items">
+                            <li class="filter-values__item">Острые</li>
+                            <li class="filter-values__item">моллюски</li>
+                            <li class="filter-values__item">мясо</li>
+                            <li class="filter-values__item">угорь</li>
+                            <li class="filter-values__item">вегетарианское</li>
+                            <li class="filter-values__item">острое</li>
+                            <li class="filter-values__item">хит</li>
+                        </ul>
+                        <button class="apply-filter">применить</button>
+                    </div>
+                </div>
             </section>
 
             <section class="content_bottom">
