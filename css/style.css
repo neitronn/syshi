@@ -29,6 +29,10 @@ svg{
   cursor: pointer;
 }
 
+.hidden{
+  visibility: hidden;
+}
+
 header{
   background: #2b2d2f;
   box-shadow: 0 0 3px rgba(0,0,0,0.5);
@@ -89,6 +93,7 @@ header{
   padding-top: 64px;
   padding-left: 32px;
   height: calc(100vh - 64px);
+  position: relative;
 }
 
 .page, .menu, .collapsed-menu{
@@ -221,16 +226,6 @@ li.tab_active{
   width: 100%;
   height: calc(100vh - 116px);
   object-fit: cover;
-}
-
-.up-arrow{
-  background-color: #181a1b;
-  height: 52px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  visibility: hidden;
 }
 
 .content_bottom{
@@ -446,4 +441,20 @@ small{
 
 .menu_sheet:hover > .thumb, .page:hover > .thumb{
   visibility: visible;
+}
+
+.up-arrow{
+  height: 42px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #181a1b;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.up-arrow svg{
+  width: 88px;
 }

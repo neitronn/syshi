@@ -66,17 +66,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 initScroll('.menu_sheet > .scroll-block');
             }
         })
-    })
+    });
 
     
     document.querySelector('.sliding-menu__close').addEventListener('click', () => {
         document.querySelector('.menu').classList.add('menu-close');
-    })
+    });
 
     document.querySelector('.collapsed-menu').addEventListener('click', () => {
         document.querySelector('.menu').classList.remove('menu-close');
-    })
+    });
     
+
+    let timer_scrol;
+    ['scroll', 'touchmove'].forEach((i) => {
+        document.querySelector('.page .scroll-block').addEventListener(i, (e) => {
+            const up_arrow = document.querySelector('.up-arrow');
+            if (e.target.scrollTop > 200){
+                up_arrow.classList.remove('hidden');
+            }else{
+                up_arrow.classList.add('hidden');
+            }
+        })
+    });
+    
+    document.querySelector('.up-arrow').addEventListener('click', () => {
+        if (timer_scrol) clearInterval(timer_scrol);
+        const scroll_block = document.querySelector('.page .scroll-block'),
+        scroll = scroll_block.scrollTop;
+        timer_scrol = setInterval(function(){
+            console.log(scroll_block.scrollTop);
+            if (scroll_block.scrollTop > 0) {
+                scroll_block.scrollTop -= scroll/50;
+            } else {
+                clearInterval(timer_scrol);
+            }
+        }, 15);  
+    });
+
 
   });
 
