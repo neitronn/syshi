@@ -12,6 +12,10 @@ h1{
     padding: 20px 40px;
 }
 
+.filter-values .reset_filter{
+    display: none;
+}
+
 .filter{
     margin-bottom: 32px;
     position: relative;
@@ -106,7 +110,8 @@ h1{
 
 .filter-values__items{
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
 }
 
 .filter-values__item{
@@ -117,6 +122,7 @@ h1{
     display: flex;
     align-items: center;
     margin-right: 10px;
+    margin-bottom: 8px;
     text-transform: capitalize;
     transition: all 0.3s;
 }
@@ -221,6 +227,10 @@ h1{
     align-items: center;
 }
 
+.catalog__quantity > .catalog__quantity_mobyle{
+   display: none;
+}
+
 .catalog__quantity > span{
     display: inline-block;
     width: 30px;
@@ -240,11 +250,11 @@ h1{
     width: 100%;
 }
 
-.catalog__quantity > span:first-child i{
+.catalog__quantity .catalog__quantity-btn:first-child i{
     background: url(../icons/img/minus.svg) 50% 50% no-repeat;
 }
 
-.catalog__quantity > span:last-child i{
+.catalog__quantity .catalog__quantity-btn:nth-child(3) i{
     background: url(../icons/img/plus.svg) 50% 50% no-repeat;
 }
 
