@@ -97,6 +97,7 @@ h1{
     width: calc(100% - 80px);
     font-size: 12px;
     display: none;
+    z-index: 5;
 }
 
 .filter.open-filter .filter-values{
@@ -143,4 +144,108 @@ h1{
     background-color: #ed1b35;
     border-color: #ed1b35;
 }
+
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog__item{
+    width: calc(20% - 50px);
+    padding: 24px;
+    position: relative;
+    border: 1px solid #44474a;
+}
+
+.catalog__item:hover{
+    border-color: #cccc28;
+}
+
+.markers{
+    position: absolute;
+}
+
+.catalog__pic, .catalog__pic img{
+    width: 100%;
+}
+
+.catalog__title{
+    font-size: 18px;
+    margin: 16px 0;
+    transition: all 0.2s;
+}
+
+.catalog__title:hover{
+    color: #cccc28;
+}
+
+.catalog__desc{
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+    height: 55px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.catalog__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog__price{
+    font-size: 18px;
+}
+
+.catalog__quantity input{
+    border-radius: 0;
+    margin: 0;
+    font-family: 'core_rhino_45_regular',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
+    font-style: normal;
+    text-align: center;
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff;
+    height: 18px;
+    width: 30px;
+    padding: 5px 0;
+    font-size: 1rem;
+    transition: all 200ms ease;
+    outline: none;
+}
+
+.catalog__quantity{
+    display: flex;
+    align-items: center;
+}
+
+.catalog__quantity > span{
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    color: #fff;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.catalog__quantity > span:hover{
+    background-color: #cccc28;
+}
+
+.catalog__quantity > span i{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.catalog__quantity > span:first-child i{
+    background: url(../icons/img/minus.svg) 50% 50% no-repeat;
+}
+
+.catalog__quantity > span:last-child i{
+    background: url(../icons/img/plus.svg) 50% 50% no-repeat;
+}
+
 
