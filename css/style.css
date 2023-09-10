@@ -15,6 +15,10 @@ body{
   --main-color-yellow: #cccc28;
 }
 
+.ogin-window-wrapper{
+  display: none;
+}
+
 a{
   color: inherit;
   text-decoration: none;
@@ -462,4 +466,78 @@ small{
 
 .up-arrow svg{
   width: 88px;
+}
+
+.login-window{
+  max-width: 460px;
+  font-family: 'core_rhino_35_light',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
+}
+
+.login-window__title{
+  font-size: 24px;
+  color: #cccc28;
+  border-bottom: 2px solid #cccc28;
+  display: inline-block;
+  margin-bottom: 32px;
+  padding-bottom: 5px;
+}
+
+.login-fieldset{
+  width: 460px;
+  padding-top: 25px;
+  border-top: 1px solid #888;
+  display: flex;
+  align-items: flex-end;
+}
+
+.login-fieldset > *{
+  width: 50%;
+}
+
+.login-fieldset label{
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.user-phone{
+  padding-right: 10px;
+}
+
+.login-fieldset input, .login-fieldset button{
+  color: #000;
+  border: 2px solid transparent;
+  height: 48px;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+.login-fieldset input{
+  width: calc(100% - 20px);
+  height: 44px;
+  letter-spacing: 4px;
+  display: inline;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+.login-fieldset button{
+  background-color: #44474a;
+    border-color: #44474a;
+    color: #2b2d2f;
+}
+
+.login-window .agreement{
+  font-size: 14px;
+  margin-top: 32px;
+  color: #c0c0c0;
+  line-height: 23px;
+  display: block;
+}
+
+.login-window .agreement a{
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+  transition: all 200ms ease;
 }

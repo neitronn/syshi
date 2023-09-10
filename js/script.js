@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 15);  
     });
 
+    castomPopup('.authorization', document.querySelector('.login-window-wrapper').innerHTML);
 
   });
 

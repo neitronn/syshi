@@ -18,7 +18,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 42px;
-    z-index: 9999;
+    z-index: 9999; 
+}
+
+.popup-animate{
     animation: showBlock 1s linear forwards;
 }
 
